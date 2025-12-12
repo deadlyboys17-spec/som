@@ -1,62 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Styled Purple Page</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #5a1ea8;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      text-align: center;
-    }
-    .container {
-      padding: 40px;
-    }
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-    p {
-      font-size: 20px;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    .photos {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .photos img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Countdown</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #7b2cbf, #9d4edd, #c77dff);
+            font-family: "Poppins", sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+        }
+
+        #countdown {
+            font-size: 2rem;
+            padding: 20px 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .hearts span {
+            position: absolute;
+            bottom: -10px;
+            color: rgba(255,255,255,0.8);
+            animation: floatUp 6s linear infinite;
+            font-size: 1.2rem;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
-  <!-- Background Music -->
-  <audio autoplay loop>
-    <source src="background.mp3" type="audio/mpeg" />
-  </audio>
 
-  <div class="container">
-    <h1>Welcome to the Second Page</h1>
-    <p>This is a redesigned page with a fresh style, smooth fonts, and visual elements placed over a purple background.</p>
+    <h1>Countdown To Her Birthday 🎂💜</h1>
+    <div id="countdown">Loading...</div>
 
-    <div class="photos">
-      <img src="photo1.jpg" alt="Photo 1" />
-      <img src="photo2.jpg" alt="Photo 2" />
-      <img src="photo3.jpg" alt="Photo 3" />
-    </div>
-  </div>
+    <div class="hearts"></div>
+
+    <script>
+        // Birthday Countdown
+        const targetDate = new Date("December 31, 2025 00:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+
+            const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML =
+                days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        // Floating hearts
+        function createHeart() {
+            const heart = document.createElement("span");
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = 3 + Math.random() * 3 + "s";
+            document.querySelector(".hearts").appendChild(heart);
+
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+
 </body>
 </html>
+
