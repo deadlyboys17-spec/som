@@ -3,77 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday sunidhi </title>
+  <title>Styled Purple Page</title>
   <style>
     body {
       margin: 0;
+      padding: 0;
+      background: #5a1ea8;
       font-family: 'Poppins', sans-serif;
-      background: #ffe6f2;
+      color: white;
       text-align: center;
     }
     .container {
       padding: 40px;
     }
     h1 {
-      font-size: 3rem;
-      color: #ff4da6;
-      margin-bottom: 10px;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
     p {
-      font-size: 1.2rem;
-      color: #444;
-      max-width: 600px;
+      font-size: 20px;
+      max-width: 700px;
       margin: auto;
+      line-height: 1.6;
     }
-    .card {
-      background: white;
-      width: 80%;
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 20px;
+    .photos {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .photos img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
       border-radius: 20px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    .heart {
-      font-size: 4rem;
-      animation: beat 1s infinite;
-      color: #ff4da6;
-    }
-    @keyframes beat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
-    .btn {
-      background: #ff4da6;
-      color: white;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #ff1a8c;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Happy Birthday, My Love ❤️</h1>
-    <p>You make my life happier than ever i thought  just by being in it. This little website is just a small piece of how special you are to me.</p>
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="background.mp3" type="audio/mpeg" />
+  </audio>
 
-    <div class="card">
-      <div class="heart">💗</div>
-      <p>Every moment with you is magical. I hope your birthday is filled with happiness, surprises, and all the love you deserve.</p>
+  <div class="container">
+    <h1>Welcome to the Second Page</h1>
+    <p>This is a redesigned page with a fresh style, smooth fonts, and visual elements placed over a purple background.</p>
+
+    <div class="photos">
+      <img src="photo1.jpg" alt="Photo 1" />
+      <img src="photo2.jpg" alt="Photo 2" />
+      <img src="photo3.jpg" alt="Photo 3" />
     </div>
-    <button class="btn" onclick="alert('I love you the most ❤️')">Click Me</button>
-  <div class="gallery">
-    <img src="photo1.jpg" class="float" />
-    <img src="photo2.jpg" class="float" />
-    <img src="photo3.jpg" class="float" />
-    <img src="photo4.jpg" class="float" />
   </div>
 </body>
 </html>
