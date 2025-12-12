@@ -3,157 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday My Love</title>
+  <title>Styled Purple Page</title>
   <style>
     body {
       margin: 0;
       padding: 0;
+      background: #5a1ea8;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffb3d9, #ffe6f2);
-      overflow-x: hidden;
+      color: white;
       text-align: center;
     }
-
-    h1 {
-      font-size: 3.5rem;
-      color: #ff1a8c;
-      margin-top: 40px;
-      text-shadow: 2px 2px 10px rgba(255, 0, 128, 0.2);
+    .container {
+      padding: 40px;
     }
-
-    p.subtitle {
-      font-size: 1.3rem;
-      color: #5a5a5a;
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 20px;
       max-width: 700px;
       margin: auto;
+      line-height: 1.6;
     }
-
-    /* Floating Hearts Background */
-    .hearts span {
-      position: fixed;
-      color: rgba(255, 85, 170, 0.4);
-      animation: floatUp 6s linear infinite;
-      font-size: 20px;
+    .photos {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
-
-    @keyframes floatUp {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(-800px); opacity: 0; }
-    }
-
-    /* Main Love Card */
-    .love-card {
-      background: white;
-      width: 85%;
-      max-width: 700px;
-      margin: 50px auto;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 8px 30px rgba(255, 0, 128, 0.15);
-      animation: fadeIn 1.2s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Floating Photo Gallery */
-    .gallery {
-      margin-top: 60px;
+    .photos img {
+      width: 250px;
       height: 250px;
-      position: relative;
-    }
-
-    .gallery img {
-      width: 150px;
-      height: 150px;
       object-fit: cover;
       border-radius: 20px;
-      position: absolute;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .gallery img:nth-child(1) { left: 10%; animation-delay: 0s; }
-    .gallery img:nth-child(2) { left: 30%; animation-delay: 1s; }
-    .gallery img:nth-child(3) { left: 50%; animation-delay: 2s; }
-    .gallery img:nth-child(4) { left: 70%; animation-delay: 3s; }
-    .gallery img:nth-child(5) { left: 85%; animation-delay: 4s; }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-25px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* Button */
-    .btn {
-      background: #ff1a8c;
-      color: white;
-      padding: 14px 30px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      background: #cc0066;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
-
-  <!-- Floating Hearts Background -->
-  <div class="hearts">
-    <span style="left:5%; animation-duration: 7s;">💗</span>
-    <span style="left:25%; animation-duration: 5s;">💕</span>
-    <span style="left:45%; animation-duration: 6s;">💓</span>
-    <span style="left:65%; animation-duration: 4s;">💞</span>
-    <span style="left:85%; animation-duration: 7.5s;">💘</span>
-  </div>
-
-
-  <h1>Happy Birthday, My Love ❤️</h1>
-  <p class="subtitle">You are the sweetest part of my life, and today is all about celebrating you. 💕</p>
-
-  <div class="love-card">
-    <p style="font-size:1.2rem; color:#444;">
-      Every moment with you feels like magic. You make my days brighter, my heart softer, and my world beautiful. <br><br>
-      I hope this year brings you endless happiness, surprises, and all the love you deserve.
-    </p>
-    <button class="btn" onclick="alert('I love you Dumb' ❤️')">Tap for a Surprise</button>
-  </div>
-
-
-  <!-- Floating Photo Gallery -->
-  <div class="gallery">
-    <img src="photo1.jpg" />
-    <img src="photo2.jpg" />
-    <img src="photo3.jpg" />
-    <img src="photo4.jpg" />
-    <img src="photo5.jpg" />
-  </div>
-
-  <!-- Secret Love Message -->
-  <div style="margin-top:60px;">
-    <button class="btn" onclick="document.getElementById('secret').style.display='block'">Unlock Secret Message 💖</button>
-    <p id="secret" style="display:none; font-size:1.3rem; color:#ff1a8c; margin-top:20px;">You are my forever person, my safe place, my happiness. I will love you endlessly. ❤️</p>
-  </div>
-
-  <!-- Memories Page Link -->
-  <div style="margin-top:40px;">
-    <a href="memories.html" class="btn">Go to Our Memories 📸</a>
-  </div>
-
   <!-- Background Music -->
-  <audio autoplay loop hidden>
-    <source src="music.mp3" type="audio/mpeg">
+  <audio autoplay loop>
+    <source src="background.mp3" type="audio/mpeg" />
   </audio>
 
+  <div class="container">
+    <h1>Welcome to the Second Page</h1>
+    <p>This is a redesigned page with a fresh style, smooth fonts, and visual elements placed over a purple background.</p>
+
+    <div class="photos">
+      <img src="photo1.jpg" alt="Photo 1" />
+      <img src="photo2.jpg" alt="Photo 2" />
+      <img src="photo3.jpg" alt="Photo 3" />
+    </div>
+  </div>
 </body>
 </html>
 
