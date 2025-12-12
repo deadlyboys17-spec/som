@@ -1,34 +1,75 @@
-# Gradle files
-.gradle/
-build/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffe6f2;
+      text-align: center;
+    }
+    .container {
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff4da6;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      width: 80%;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .heart {
+      font-size: 4rem;
+      animation: beat 1s infinite;
+      color: #ff4da6;
+    }
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    .btn {
+      background: #ff4da6;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ff1a8c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday, My Love ❤️</h1>
+    <p>You make my world brighter just by being in it. This little website is just a small piece of how special you are to me.</p>
 
-# Local configuration file (sdk path, etc)
-local.properties
+    <div class="card">
+      <div class="heart">💗</div>
+      <p>Every moment with you is magical. I hope your birthday is filled with happiness, surprises, and all the love you deserve.</p>
+    </div>
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
+    <button class="btn" onclick="alert('I love you the most ❤️')">Click Me</button>
+  </div>
+</body>
+</html>
